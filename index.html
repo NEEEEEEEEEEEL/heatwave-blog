@@ -79,6 +79,7 @@
       </div>
       <!-- heat wave visualization -->
       <div class="info-box">
+        <h3>Data visualization</h3>
         <p>
           By tracking the Universal Thermal Climate Index (UTCI) values over
           time for the West Bengal region, we observe a gradual shift in the
@@ -92,6 +93,7 @@
           events in the region.
         </p>
       </div>
+      <!-- visualization part -->
       <div class="image">
         <!-- <img src="images/wb_1.png" alt="Workflow Image"> -->
         <!-- <img src="images/wb_2.png" alt="Workflow Image"> -->
@@ -102,6 +104,35 @@
         <img src="images/wb_7.png" alt="Workflow Image" />
         <img src="images/wb_8.png" alt="Workflow Image" />
         <!-- <img src="images/wb_9.png" alt="Workflow Image"> -->
+      </div>
+      <!-- preprocessing part -->
+      <div class="info-box">
+        <h3>Data Preprocessing</h3>
+        <p>The data underwent preprocessing to facilitate analysis. The mean UTCI value was calculated for each timestamp within the selected period and region. This step provides a representative value of the overall thermal stress experienced during each hour of the day.</p>
+      </div>
+      <!-- model selection part -->
+      <div class="content-box">
+        <h3>Model Selection</h3>
+        <p>Given that we are working with time series data, Recurrent Neural Networks (RNNs) are a natural choice due to their inherent ability to capture temporal dependencies. Among RNN architectures, Long Short-Term Memory (LSTM) models are particularly well-suited for this task. LSTMs excel at learning long-term dependencies in sequential data, overcoming the vanishing gradient problem that can hinder traditional RNNs. </p>
+        <p>Several promising model architectures have ben explored:</p>
+        <ul>
+          <li><strong>LSTM:</strong> This foundational model serves as a strong baseline for time series forecasting. LSTMs effectively capture long-term dependencies through their internal memory cells.</li>
+          <li><strong>LSTM with Attention:</strong> Attention mechanisms enhance LSTMs by allowing the model to focus on the most relevant parts of the input sequence when making predictions, potentially improving accuracy and interpretability.</li>
+          <li><strong>Gated Recurrent Units (GRU):</strong> GRUs are a simplified version of LSTMs with fewer parameters, making them potentially faster to train and easier to optimize.</li>
+          <li><strong>GRU with Attention:</strong> Combining the efficiency of GRUs with the improved focus of attention mechanisms can offer a balance between performance and computational cost.</li>
+        </ul>
+        <div>
+            <h3>Model Selection</h3>
+            <p>Given that we are working with time series data, Recurrent Neural Networks (RNNs) are a natural choice due to their inherent ability to capture temporal dependencies. Among RNN architectures, Long Short-Term Memory (LSTM) models are particularly well-suited for this task. LSTMs excel at learning long-term dependencies in sequential data, overcoming the vanishing gradient problem that can hinder traditional RNNs. </p>
+            <p>Several promising model architectures can be explored:</p>
+            <ul>
+              <li><strong>LSTM:</strong> This foundational model serves as a strong baseline for time series forecasting. LSTMs effectively capture long-term dependencies through their internal memory cells.</li>
+              <li><strong>LSTM with Attention:</strong> Attention mechanisms enhance LSTMs by allowing the model to focus on the most relevant parts of the input sequence when making predictions, potentially improving accuracy and interpretability.</li>
+              <li><strong>Gated Recurrent Units (GRU):</strong> GRUs are a simplified version of LSTMs with fewer parameters, making them potentially faster to train and easier to optimize.</li>
+              <li><strong>GRU with Attention:</strong> Combining the efficiency of GRUs with the improved focus of attention mechanisms can offer a balance between performance and computational cost.</li>
+            </ul>
+            <p>The choice of the best model ultimately depends on factors such as data characteristics, computational resources, and the specific requirements of the forecasting task. Importantly, the model selection process should prioritize accuracy and consider relevant loss metrics (e.g., Mean Squared Error, Mean Absolute Error) to evaluate model performance effectively.</p>
+          </div>    
       </div>
     </section>
 
