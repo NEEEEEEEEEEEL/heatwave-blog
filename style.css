@@ -1,0 +1,284 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FEF9D9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #3C3D37;
+    padding: 5px;
+    text-align: center;
+    
+}   
+
+.navbar a {
+    color: #EFF3EA;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition for hover effect */
+    border-radius: 5px;
+    /* box-shadow: 0px 4px 2px -2px white; */
+}
+
+.navbar a:hover {
+    background-color: #F8FAFC;
+    color: #333;  /* Dark text color on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: #86A788;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+/* Section */
+.section {
+    padding: 40px 20px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #EFF3EA;  /* Highlight the heading with a warm color */
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .email {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f0f4f8;  /* Light text color for the email */
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .email a {
+    text-decoration: none;
+    color: #EFF3EA;  /* Give the email a warm color */
+    transition: color 0.3s ease;
+}
+
+footer .email a:hover {
+    color: #EFF3EA;  /* Darken the color on hover for interactivity */
+}
+
+/* images */
+/* Styling for the image container in the workflow section */
+#workflow .image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 20px;
+    border: 2px solid #333;  /* Box around the images container */
+    border-radius: 10px;  /* Optional: rounded corners for the box */
+    box-sizing: border-box;
+    background-color: #EEEEEE; /* Optional: adds a light background to the image section */
+}
+
+/* Styling individual images */
+#workflow .image img {
+    max-width: 200px;   /* Reduced size of the images */
+    max-height: 200px;  /* Ensures the images don't grow too large */
+    object-fit: cover;  /* Ensures the images maintain aspect ratio without distortion */
+    border-radius: 5px; /* Optional: rounded corners for images */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);  /* Optional: adds a subtle shadow to images */
+}
+
+/* Responsive design: Adjusting layout for smaller screens */
+@media (max-width: 768px) {
+    #workflow .image {
+        justify-content: center;
+    }
+    
+    #workflow .image img {
+        max-width: 150px;  /* Resize images for smaller screens */
+        max-height: 150px;
+    }
+}
+
+/* Style for the paragraph about the data visualization part */
+.info-box {
+    background-color: #f4f4f4; /* Same background color as the images box */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect for depth */
+    margin-bottom: 20px; /* Space below the box */
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #333; /* Dark color for text */
+    line-height: 1.6; /* Improved line spacing */
+    text-align: justify;
+}
+
+/* Adjust the image section styling */
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Box Styling for data collection part */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Main Content Box */
+  .content-box {
+    background: linear-gradient(145deg, #f0f8ff, #D0DDD0); /* Soft gradient background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .content-box:hover {
+    transform: translateY(-5px); /* Hover effect for subtle lift */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Headings */
+  .content-box h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .content-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Paragraph Text */
+  .content-box p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  /* Unordered List */
+  .content-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .content-box ul li {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .content-box ul li::before {
+    content: "✔"; /* Custom bullet point */
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-size: 1.3rem;
+    color: #578E7E;
+  }
+  
+  /* List items on hover */
+  .content-box ul li:hover {
+    color: #578E7E;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content-box {
+      padding: 20px;
+    }
+  
+    .content-box h2 {
+      font-size: 1.5rem;
+    }
+  
+    .content-box h3 {
+      font-size: 1.2rem;
+    }
+  
+    .content-box p, .content-box ul li {
+      font-size: 1rem;
+    }
+  }
+  
