@@ -29,6 +29,7 @@ body {
     padding: 10px 15px;
     transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition for hover effect */
     border-radius: 5px;
+    display: flex;
     /* box-shadow: 0px 4px 2px -2px white; */
 }
 
