@@ -53,28 +53,75 @@
       </p>
       <!-- data collection -->
       <div class="content-box">
-        <h2>Diving Deep into West Bengal's Heatwaves: Our Approach Using ERA5-HEAT Data</h2>
-      
-        <p>For the research on extreme heatwaves in West Bengal, we're leveraging the power of the ERA5-HEAT dataset provided by the Copernicus Climate Change Service (C3S).</p>
-      
+        <h2>
+          Diving Deep into West Bengal's Heatwaves: Our Approach Using ERA5-HEAT
+          Data
+        </h2>
+
+        <p>
+          For the research on extreme heatwaves in West Bengal, we're leveraging
+          the power of the ERA5-HEAT dataset provided by the Copernicus Climate
+          Change Service (C3S).
+        </p>
+
         <h3>What is ERA5-HEAT?</h3>
-        <p>ERA5-HEAT is a highly reliable dataset derived from the ERA5 reanalysis, a comprehensive global dataset produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). It provides crucial information like:</p>
+        <p>
+          ERA5-HEAT is a highly reliable dataset derived from the ERA5
+          reanalysis, a comprehensive global dataset produced by the European
+          Centre for Medium-Range Weather Forecasts (ECMWF). It provides crucial
+          information like:
+        </p>
         <ul>
-          <li><strong>Mean Radiant Temperature (MRT):</strong> MRT represents the average radiant heat that a human body would experience from its surroundings. It's calculated by considering factors like air temperature, solar radiation, and longwave radiation emitted by the environment.</li>
-          <li><strong>Universal Thermal Climate Index (UTCI):</strong> UTCI is a more holistic index that integrates multiple environmental factors, including air temperature, humidity, wind speed, and radiation. It provides a more accurate assessment of the overall thermal stress experienced by the human body compared to simple air temperature measurements.</li>
+          <li>
+            <strong>Mean Radiant Temperature (MRT):</strong> MRT represents the
+            average radiant heat that a human body would experience from its
+            surroundings. It's calculated by considering factors like air
+            temperature, solar radiation, and longwave radiation emitted by the
+            environment.
+          </li>
+          <li>
+            <strong>Universal Thermal Climate Index (UTCI):</strong> UTCI is a
+            more holistic index that integrates multiple environmental factors,
+            including air temperature, humidity, wind speed, and radiation. It
+            provides a more accurate assessment of the overall thermal stress
+            experienced by the human body compared to simple air temperature
+            measurements.
+          </li>
         </ul>
-      
+
         <h3>Data Selection</h3>
-        <p>To focus on the critical pre-monsoon period and recent trends, we've selected data from <strong>2013 to 2024</strong> for the months of <strong>April, May, and June</strong>.</p>
-        <p>Furthermore, to ensure a localized analysis, we've narrowed down our focus to a specific region within West Bengal. This allows for a more in-depth understanding of the unique heat stress patterns within this area.</p>
-      
+        <p>
+          To focus on the critical pre-monsoon period and recent trends, we've
+          selected data from <strong>2013 to 2024</strong> for the months of
+          <strong>April, May, and June</strong>.
+        </p>
+        <p>
+          Furthermore, to ensure a localized analysis, we've narrowed down our
+          focus to a specific region within West Bengal. This allows for a more
+          in-depth understanding of the unique heat stress patterns within this
+          area.
+        </p>
+
         <h3>Why This Data Matters</h3>
         <p>This dataset is invaluable for:</p>
         <ul>
-          <li>Understanding Heatwave Trends: Analyzing the frequency, intensity, and duration of heatwaves in West Bengal.</li>
-          <li>Identifying Vulnerable Populations: Pinpointing areas and groups most at risk from heat stress.</li>
-          <li>Assessing Climate Change Impacts: Evaluating how climate change is likely to affect heatwave patterns and their impacts.</li>
-          <li>Developing Effective Mitigation Strategies: Supporting the development of early warning systems and urban planning solutions to mitigate heat stress.</li>
+          <li>
+            Understanding Heatwave Trends: Analyzing the frequency, intensity,
+            and duration of heatwaves in West Bengal.
+          </li>
+          <li>
+            Identifying Vulnerable Populations: Pinpointing areas and groups
+            most at risk from heat stress.
+          </li>
+          <li>
+            Assessing Climate Change Impacts: Evaluating how climate change is
+            likely to affect heatwave patterns and their impacts.
+          </li>
+          <li>
+            Developing Effective Mitigation Strategies: Supporting the
+            development of early warning systems and urban planning solutions to
+            mitigate heat stress.
+          </li>
         </ul>
       </div>
       <!-- heat wave visualization -->
@@ -108,32 +155,147 @@
       <!-- preprocessing part -->
       <div class="info-box">
         <h3>Data Preprocessing</h3>
-        <p>The data underwent preprocessing to facilitate analysis. The mean UTCI value was calculated for each timestamp within the selected period and region. This step provides a representative value of the overall thermal stress experienced during each hour of the day.</p>
+        <p>
+          The data underwent preprocessing to facilitate analysis. The mean UTCI
+          value was calculated for each timestamp within the selected period and
+          region. This step provides a representative value of the overall
+          thermal stress experienced during each hour of the day.
+        </p>
       </div>
       <!-- model selection part -->
       <div class="content-box">
         <h3>Model Selection</h3>
-        <p>Given that we are working with time series data, Recurrent Neural Networks (RNNs) are a natural choice due to their inherent ability to capture temporal dependencies. Among RNN architectures, Long Short-Term Memory (LSTM) models are particularly well-suited for this task. LSTMs excel at learning long-term dependencies in sequential data, overcoming the vanishing gradient problem that can hinder traditional RNNs. </p>
+        <p>
+          Given that we are working with time series data, Recurrent Neural
+          Networks (RNNs) are a natural choice due to their inherent ability to
+          capture temporal dependencies. Among RNN architectures, Long
+          Short-Term Memory (LSTM) models are particularly well-suited for this
+          task. LSTMs excel at learning long-term dependencies in sequential
+          data, overcoming the vanishing gradient problem that can hinder
+          traditional RNNs.
+        </p>
         <p>Several promising model architectures have ben explored:</p>
         <ul>
-          <li><strong>LSTM:</strong> This foundational model serves as a strong baseline for time series forecasting. LSTMs effectively capture long-term dependencies through their internal memory cells.</li>
-          <li><strong>LSTM with Attention:</strong> Attention mechanisms enhance LSTMs by allowing the model to focus on the most relevant parts of the input sequence when making predictions, potentially improving accuracy and interpretability.</li>
-          <li><strong>Gated Recurrent Units (GRU):</strong> GRUs are a simplified version of LSTMs with fewer parameters, making them potentially faster to train and easier to optimize.</li>
-          <li><strong>GRU with Attention:</strong> Combining the efficiency of GRUs with the improved focus of attention mechanisms can offer a balance between performance and computational cost.</li>
+          <li>
+            <strong>LSTM:</strong> This foundational model serves as a strong
+            baseline for time series forecasting. LSTMs effectively capture
+            long-term dependencies through their internal memory cells.
+          </li>
+          <li>
+            <strong>LSTM with Attention:</strong> Attention mechanisms enhance
+            LSTMs by allowing the model to focus on the most relevant parts of
+            the input sequence when making predictions, potentially improving
+            accuracy and interpretability.
+          </li>
+          <li>
+            <strong>Gated Recurrent Units (GRU):</strong> GRUs are a simplified
+            version of LSTMs with fewer parameters, making them potentially
+            faster to train and easier to optimize.
+          </li>
+          <li>
+            <strong>GRU with Attention:</strong> Combining the efficiency of
+            GRUs with the improved focus of attention mechanisms can offer a
+            balance between performance and computational cost.
+          </li>
         </ul>
         <div>
-            <h3>Model Selection</h3>
-            <p>Given that we are working with time series data, Recurrent Neural Networks (RNNs) are a natural choice due to their inherent ability to capture temporal dependencies. Among RNN architectures, Long Short-Term Memory (LSTM) models are particularly well-suited for this task. LSTMs excel at learning long-term dependencies in sequential data, overcoming the vanishing gradient problem that can hinder traditional RNNs. </p>
-            <p>Several promising model architectures can be explored:</p>
-            <ul>
-              <li><strong>LSTM:</strong> This foundational model serves as a strong baseline for time series forecasting. LSTMs effectively capture long-term dependencies through their internal memory cells.</li>
-              <li><strong>LSTM with Attention:</strong> Attention mechanisms enhance LSTMs by allowing the model to focus on the most relevant parts of the input sequence when making predictions, potentially improving accuracy and interpretability.</li>
-              <li><strong>Gated Recurrent Units (GRU):</strong> GRUs are a simplified version of LSTMs with fewer parameters, making them potentially faster to train and easier to optimize.</li>
-              <li><strong>GRU with Attention:</strong> Combining the efficiency of GRUs with the improved focus of attention mechanisms can offer a balance between performance and computational cost.</li>
-            </ul>
-            <p>The choice of the best model ultimately depends on factors such as data characteristics, computational resources, and the specific requirements of the forecasting task. Importantly, the model selection process should prioritize accuracy and consider relevant loss metrics (e.g., Mean Squared Error, Mean Absolute Error) to evaluate model performance effectively.</p>
-          </div>    
+          <h3>Model Selection</h3>
+          <p>
+            Given that we are working with time series data, Recurrent Neural
+            Networks (RNNs) are a natural choice due to their inherent ability
+            to capture temporal dependencies. Among RNN architectures, Long
+            Short-Term Memory (LSTM) models are particularly well-suited for
+            this task. LSTMs excel at learning long-term dependencies in
+            sequential data, overcoming the vanishing gradient problem that can
+            hinder traditional RNNs.
+          </p>
+          <p>Several promising model architectures can be explored:</p>
+          <ul>
+            <li>
+              <strong>LSTM:</strong> This foundational model serves as a strong
+              baseline for time series forecasting. LSTMs effectively capture
+              long-term dependencies through their internal memory cells.
+            </li>
+            <li>
+              <strong>LSTM with Attention:</strong> Attention mechanisms enhance
+              LSTMs by allowing the model to focus on the most relevant parts of
+              the input sequence when making predictions, potentially improving
+              accuracy and interpretability.
+            </li>
+            <li>
+              <strong>Gated Recurrent Units (GRU):</strong> GRUs are a
+              simplified version of LSTMs with fewer parameters, making them
+              potentially faster to train and easier to optimize.
+            </li>
+            <li>
+              <strong>GRU with Attention:</strong> Combining the efficiency of
+              GRUs with the improved focus of attention mechanisms can offer a
+              balance between performance and computational cost.
+            </li>
+          </ul>
+          <p>
+            The choice of the best model ultimately depends on factors such as
+            data characteristics, computational resources, and the specific
+            requirements of the forecasting task. Importantly, the model
+            selection process should prioritize accuracy and consider relevant
+            loss metrics (e.g., Mean Squared Error, Mean Absolute Error) to
+            evaluate model performance effectively.
+          </p>
+        </div>
       </div>
+      <!-- model evaluation -->
+    <div class="info-box">
+    <h3>Model Evaluation</h3>
+    <div class="card-container"> 
+        <div class="card">
+          <h4>LSTM</h4>
+          <p>This model employs a deep learning architecture with two stacked LSTM layers followed by fully connected dense layers. The use of dropout regularization (with a rate of 0.3) helps to prevent overfitting by randomly dropping out a fraction of neurons during training. This architecture allows the model to effectively capture complex temporal dependencies within the time series data.</p>
+          <ul>
+            <li>R-squared: 0.9426</li>
+            <li>MSE: 0.0024</li>
+            <li>RMSE: 0.0495</li>
+            <li>MAE: 0.0378</li>
+          </ul>
+          <img src="images/lstm.png" alt="LSTM Architecture Diagram"> 
+        </div>
+      
+        <div class="card">
+          <h4>LSTM with Attention</h4>
+          <p>This model incorporates an attention mechanism into the LSTM architecture. It utilizes a Multi-Head Attention layer to allow the model to focus on the most relevant parts of the input sequence during processing. This approach can improve the model's ability to capture long-range dependencies and potentially enhance predictive accuracy.</p>
+          <ul>
+            <li>R-squared: 0.9715</li>
+            <li>MSE: 0.0012</li>
+            <li>RMSE: 0.0348</li>
+            <li>MAE: 0.0264</li>
+          </ul>
+          <img src="images/lsmtattention.png" alt="LSTM with Attention Architecture Diagram"> 
+        </div>
+      
+        <div class="card">
+          <h4>GRU</h4>
+          <p>This model utilizes a deep learning architecture with two stacked GRU (Gated Recurrent Unit) layers followed by fully connected dense layers. GRUs are a simplified version of LSTMs with fewer parameters, potentially leading to faster training and easier optimization. Dropout regularization with a rate of 0.3 is employed to prevent overfitting.</p> 
+          <ul>
+            <li>R-squared: 0.9646</li>
+            <li>MSE: 0.0015</li>
+            <li>RMSE: 0.0389</li>
+            <li>MAE: 0.0292</li>
+          </ul>
+          <img src="images/gru.png" alt="GRU Architecture Diagram"> 
+        </div>
+      
+        <div class="card extra">
+          <h4>GRU with Attention</h4>
+          <p>This model combines the strengths of GRUs and attention mechanisms. It first processes the input sequence using a GRU layer. Then, a Multi-Head Attention layer is applied to focus on the most important parts of the GRU output. Finally, another GRU layer processes the attention-weighted output, followed by fully connected layers for prediction.</p>
+          <ul>
+            <li>R-squared: 0.9538</li>
+            <li>MSE: 0.0020</li>
+            <li>RMSE: 0.0444</li>
+            <li>MAE: 0.0314</li>
+          </ul>
+          <img src="images/gruattention.png" alt="GRU with Attention Architecture Diagram"> 
+        </div>
+      </div>
+    </div>
     </section>
 
     <!-- About Us Section -->
