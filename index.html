@@ -244,58 +244,112 @@
         </div>
       </div>
       <!-- model evaluation -->
-    <div class="info-box">
-    <h3>Model Evaluation</h3>
-    <div class="card-container"> 
-        <div class="card">
-          <h4>LSTM</h4>
-          <p>This model employs a deep learning architecture with two stacked LSTM layers followed by fully connected dense layers. The use of dropout regularization (with a rate of 0.3) helps to prevent overfitting by randomly dropping out a fraction of neurons during training. This architecture allows the model to effectively capture complex temporal dependencies within the time series data.</p>
-          <ul>
-            <li>R-squared: 0.9426</li>
-            <li>MSE: 0.0024</li>
-            <li>RMSE: 0.0495</li>
-            <li>MAE: 0.0378</li>
-          </ul>
-          <img src="images/lstm.png" alt="LSTM Architecture Diagram"> 
-        </div>
-      
-        <div class="card">
-          <h4>LSTM with Attention</h4>
-          <p>This model incorporates an attention mechanism into the LSTM architecture. It utilizes a Multi-Head Attention layer to allow the model to focus on the most relevant parts of the input sequence during processing. This approach can improve the model's ability to capture long-range dependencies and potentially enhance predictive accuracy.</p>
-          <ul>
-            <li>R-squared: 0.9715</li>
-            <li>MSE: 0.0012</li>
-            <li>RMSE: 0.0348</li>
-            <li>MAE: 0.0264</li>
-          </ul>
-          <img src="images/lsmtattention.png" alt="LSTM with Attention Architecture Diagram"> 
-        </div>
-      
-        <div class="card">
-          <h4>GRU</h4>
-          <p>This model utilizes a deep learning architecture with two stacked GRU (Gated Recurrent Unit) layers followed by fully connected dense layers. GRUs are a simplified version of LSTMs with fewer parameters, potentially leading to faster training and easier optimization. Dropout regularization with a rate of 0.3 is employed to prevent overfitting.</p> 
-          <ul>
-            <li>R-squared: 0.9646</li>
-            <li>MSE: 0.0015</li>
-            <li>RMSE: 0.0389</li>
-            <li>MAE: 0.0292</li>
-          </ul>
-          <img src="images/gru.png" alt="GRU Architecture Diagram"> 
-        </div>
-      
-        <div class="card extra">
-          <h4>GRU with Attention</h4>
-          <p>This model combines the strengths of GRUs and attention mechanisms. It first processes the input sequence using a GRU layer. Then, a Multi-Head Attention layer is applied to focus on the most important parts of the GRU output. Finally, another GRU layer processes the attention-weighted output, followed by fully connected layers for prediction.</p>
-          <ul>
-            <li>R-squared: 0.9538</li>
-            <li>MSE: 0.0020</li>
-            <li>RMSE: 0.0444</li>
-            <li>MAE: 0.0314</li>
-          </ul>
-          <img src="images/gruattention.png" alt="GRU with Attention Architecture Diagram"> 
+      <div class="info-box">
+        <h3>Model Evaluation</h3>
+        <div class="card-container">
+          <div class="card">
+            <h4>LSTM</h4>
+            <p>
+              This model employs a deep learning architecture with two stacked
+              LSTM layers followed by fully connected dense layers. The use of
+              dropout regularization (with a rate of 0.3) helps to prevent
+              overfitting by randomly dropping out a fraction of neurons during
+              training. This architecture allows the model to effectively
+              capture complex temporal dependencies within the time series data.
+            </p>
+            <ul>
+              <li>R-squared: 0.9426</li>
+              <li>MSE: 0.0024</li>
+              <li>RMSE: 0.0495</li>
+              <li>MAE: 0.0378</li>
+            </ul>
+            <img src="images/lstm.png" alt="LSTM Architecture Diagram" />
+          </div>
+
+          <div class="card">
+            <h4>LSTM with Attention</h4>
+            <p>
+              This model incorporates an attention mechanism into the LSTM
+              architecture. It utilizes a Multi-Head Attention layer to allow
+              the model to focus on the most relevant parts of the input
+              sequence during processing. This approach can improve the model's
+              ability to capture long-range dependencies and potentially enhance
+              predictive accuracy.
+            </p>
+            <ul>
+              <li>R-squared: 0.9715</li>
+              <li>MSE: 0.0012</li>
+              <li>RMSE: 0.0348</li>
+              <li>MAE: 0.0264</li>
+            </ul>
+            <img
+              src="images/lsmtattention.png"
+              alt="LSTM with Attention Architecture Diagram"
+            />
+          </div>
+
+          <div class="card">
+            <h4>GRU</h4>
+            <p>
+              This model utilizes a deep learning architecture with two stacked
+              GRU (Gated Recurrent Unit) layers followed by fully connected
+              dense layers. GRUs are a simplified version of LSTMs with fewer
+              parameters, potentially leading to faster training and easier
+              optimization. Dropout regularization with a rate of 0.3 is
+              employed to prevent overfitting.
+            </p>
+            <ul>
+              <li>R-squared: 0.9646</li>
+              <li>MSE: 0.0015</li>
+              <li>RMSE: 0.0389</li>
+              <li>MAE: 0.0292</li>
+            </ul>
+            <img src="images/gru.png" alt="GRU Architecture Diagram" />
+          </div>
+
+          <div class="card extra">
+            <h4>GRU with Attention</h4>
+            <p>
+              This model combines the strengths of GRUs and attention
+              mechanisms. It first processes the input sequence using a GRU
+              layer. Then, a Multi-Head Attention layer is applied to focus on
+              the most important parts of the GRU output. Finally, another GRU
+              layer processes the attention-weighted output, followed by fully
+              connected layers for prediction.
+            </p>
+            <ul>
+              <li>R-squared: 0.9538</li>
+              <li>MSE: 0.0020</li>
+              <li>RMSE: 0.0444</li>
+              <li>MAE: 0.0314</li>
+            </ul>
+            <img
+              src="images/gruattention.png"
+              alt="GRU with Attention Architecture Diagram"
+            />
+          </div>
         </div>
       </div>
-    </div>
+      <!-- model comparison -->
+      <div class="info-box">
+        <h3>Model Performance Comparison</h3>
+        <p>
+          The LSTM+Attention model outperforms other models in predicting
+          heatwave patterns due to its unique ability to focus on the most
+          relevant features of the input data. While the LSTM component captures
+          long-term dependencies and temporal patterns effectively, the
+          attention mechanism further enhances its performance by dynamically
+          assigning weights to different time steps, allowing the model to
+          prioritize critical information. This combination helps in mitigating
+          the loss of important details over time, a limitation often observed
+          in plain LSTM or GRU models. As a result, the LSTM+Attention model
+          achieves higher accuracy and better generalization, making it more
+          adept at identifying subtle shifts and trends in the heatwave data,
+          especially for localized and seasonal variations in the West Bengal
+          region.
+        </p>
+        <img src="images/comparison.png" alt="Bar Chart of Model Performance" />
+      </div>
     </section>
 
     <!-- About Us Section -->
